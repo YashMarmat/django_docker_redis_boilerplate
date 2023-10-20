@@ -1,0 +1,16 @@
+{% extends './base.html' %}
+
+{% block content %}
+<h3>All Blogs</h3>
+
+<p>Cached val: {{ cached_val }}</p>
+
+<ul>
+    {% for each_blog in all_blogs %}
+    <li>
+        {{ each_blog.title }} | {{ each_blog.author }}
+        {% endfor %}
+    </li>
+</ul>
+
+{% endblock content %}
