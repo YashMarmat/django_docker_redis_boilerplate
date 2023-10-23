@@ -7,7 +7,8 @@ import time
 
 
 def homepage_view(request):
-    """serves file system caching"""
+    """returns the cached value on webpage"""
+    
     cache.set("my_value", "custom data", 30)
     get_cached_value = cache.get("my_value")
     return render(request, 'blog/home.html', {"cached_val": get_cached_value})
